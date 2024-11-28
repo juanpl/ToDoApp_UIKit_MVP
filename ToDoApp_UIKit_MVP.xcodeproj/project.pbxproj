@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3D6698A62CF763D600843DD8 /* Exceptions for "ToDoApp_UIKit_MVP" folder in "ToDoApp_UIKit_MVP" target */ = {
+		3D6698CE2CF7644900843DD8 /* Exceptions for "ToDoApp_UIKit_MVP" folder in "ToDoApp_UIKit_MVP" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,10 +21,10 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3D6698962CF763D500843DD8 /* ToDoApp_UIKit_MVP */ = {
+		3D6698C72CF7644900843DD8 /* ToDoApp_UIKit_MVP */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				3D6698A62CF763D600843DD8 /* Exceptions for "ToDoApp_UIKit_MVP" folder in "ToDoApp_UIKit_MVP" target */,
+				3D6698CE2CF7644900843DD8 /* Exceptions for "ToDoApp_UIKit_MVP" folder in "ToDoApp_UIKit_MVP" target */,
 			);
 			path = ToDoApp_UIKit_MVP;
 			sourceTree = "<group>";
@@ -45,7 +45,7 @@
 		3D66988B2CF763D500843DD8 = {
 			isa = PBXGroup;
 			children = (
-				3D6698962CF763D500843DD8 /* ToDoApp_UIKit_MVP */,
+				3D6698C72CF7644900843DD8 /* ToDoApp_UIKit_MVP */,
 				3D6698952CF763D500843DD8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +74,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3D6698962CF763D500843DD8 /* ToDoApp_UIKit_MVP */,
+				3D6698C72CF7644900843DD8 /* ToDoApp_UIKit_MVP */,
 			);
 			name = ToDoApp_UIKit_MVP;
 			packageProductDependencies = (
