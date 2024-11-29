@@ -47,9 +47,14 @@ class ListOfTaskView: UIViewController {
     }()
     
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Delete all",
+                                                                 style: .done,
+                                                                 target: presenter,
+                                                                 action: #selector(presenter.removeAllTask))
+        
         [taskTextView, createTaskButton, taskCollectionView].forEach(view.addSubview)
         
         NSLayoutConstraint.activate([
