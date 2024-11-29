@@ -43,6 +43,7 @@ class ListOfTaskView: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .systemGroupedBackground
+        collectionView.register(TaskCollectionViewCell.self, forCellWithReuseIdentifier: "TaskCollectionViewCell")
         return collectionView
     }()
     
@@ -74,6 +75,8 @@ class ListOfTaskView: UIViewController {
             taskCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             taskCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
+        
+        taskCollectionView.dataSource = self
     }
     
     @objc
@@ -82,5 +85,25 @@ class ListOfTaskView: UIViewController {
         presenter.create(task: taskTextView.text)
     }
     
+
+    
 }
+
+extension ListOfTaskView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        presenter.tasks.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TaskCollectionViewCell", for: indexPath) as! TaskCollectionViewCell
+        
+        let task = presenter.tasks[indexPath.row]
+        
+        cell.config(id: task.id, text: task.text, isFavorite: task.isFavorite)
+        
+        return cell
+    }
+}
+
+
 
