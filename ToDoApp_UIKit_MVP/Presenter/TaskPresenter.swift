@@ -7,7 +7,10 @@
 
 import Foundation
 
+
+
 final class TaskPresenter {
+    
     var tasks: [Task] = []
     
     private var taskDatabase = TaskDatabase()
@@ -29,6 +32,7 @@ final class TaskPresenter {
         tasks = taskDatabase.remove(taskId: taskId)
     }
     
+    @objc
     func removeAllTask(){
         tasks = taskDatabase.removeAll()
     }
